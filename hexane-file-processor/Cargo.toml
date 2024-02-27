@@ -1,0 +1,57 @@
+[package]
+name = 'hexane-file-processor'
+version = '0.1.0'
+edition = '2021'
+authors = ['Andinus <andinus@nand.sh>']
+
+[dependencies]
+serde_json = '1.0'
+time = '0.3'
+tracing = '0.1'
+text-splitter = '0.6'
+toml = '0.8'
+temp-dir = '0.1'
+sha2 = '0.10'
+
+[dependencies.serde]
+version = '1.0'
+features = ['derive']
+
+[dependencies.sqlx]
+version = '0.7'
+features = [
+    'runtime-tokio',
+    'postgres',
+    'uuid',
+    'ipnetwork',
+    'json',
+    'macros',
+    'time',
+    'bigdecimal',
+]
+
+[dependencies.clap]
+version = '4.4'
+features = [
+    'derive',
+    'env',
+]
+
+[dependencies.uuid]
+version = '1.7'
+features = ['serde']
+
+[dependencies.tokio]
+version = '1.0'
+features = ['full']
+
+[dependencies.tracing-subscriber]
+version = '0.3'
+features = ['env-filter']
+
+[dependencies.reqwest]
+version = '0.11'
+features = ['json']
+
+[dependencies.hexane-shared]
+path = '../hexane-shared'

@@ -1,0 +1,22 @@
+<ul style="color: var(--fg-special-warm)">
+    <li><!--% processed-file-count %--> / <!--% total-file-count %--> files processed</li>
+    <li>Disk Usage: <!--% total-size %--> / 20 MiB</li>
+</ul>
+
+<form hx-post="/datasource/file-action"
+      hx-target="previous .status"
+      action="/datasource/file-action"
+      method="post">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Processed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--% files %-->
+        </tbody>
+    </table>
+</form>

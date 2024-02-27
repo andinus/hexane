@@ -1,0 +1,18 @@
+<h2>Login.</h2>
+<form hx-post="/account/login"
+      hx-target="find .status"
+      hx-swap="outerHTML"
+      action="/account/login"
+      method="post">
+    <!--% form-status %-->
+    <p>
+        <label for="login">Username / Email: </label>
+        <input type="text" id="login" name="login">
+    </p>
+    <p>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password">
+    </p>
+    <button style="min-width: 100%" type="submit" id="submit">Login</button>
+</form>
+<p>No Account? <a href="/account/register">Register</a></p>

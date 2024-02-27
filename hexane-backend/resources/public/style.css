@@ -1,0 +1,98 @@
+/* dims the form when a request is in flight */
+/* form.htmx-request */
+.htmx-request {
+    opacity: .5;
+    transition: opacity 300ms linear;
+    pointer-events:none;
+}
+
+form.htmx-request progress {
+    opacity: 1 !important;
+}
+
+.status {
+    padding: 1em;
+    background: var(--bg-dim);
+    border: 1px solid var(--bg-special-warm);
+}
+.status-failed {
+    border: 1px solid var(--red);
+}
+.status:empty {
+    display: none;
+}
+.fg-red {
+    color: var(--red);
+}
+
+.form-disabled input,
+.form-disabled button {
+    opacity: .7;
+    pointer-events:none;
+}
+
+/* inserting this collapsed row between two flex items will make
+ * the flex item that comes after it break to a new row */
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.query-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.query-form #query-input {
+    width: 85%;
+    flex-grow: 1;
+}
+.query-form button {
+    flex-grow: 1;
+}
+.query-response {
+    white-space: pre-line;
+}
+.query-response:empty {
+    display: none;
+}
+
+#datasource-upload-form .status {
+    margin-bottom: 1ch;
+}
+#datasource-upload-form .status ul {
+    margin-bottom: 0;
+}
+
+#datasource-upload-form fieldset {
+    display:flex;
+    gap: 10px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+#datasource-upload-form fieldset #file-field {
+    flex-grow: 2;
+}
+#datasource-upload-form fieldset #category-field,
+#datasource-upload-form fieldset #submit-field {
+    flex-grow: 1;
+}
+#datasource-upload-form fieldset #submit-field button {
+    width: 100%
+}
+
+.datasource-file-unprocessed {
+    background: var(--bg-inactive);
+}
+
+.datasource-delete {
+    margin: 1px !important;
+    padding: 0.2em !important;
+    height: 1.4em !important;
+    background-color: var(--red-intense-bg);
+}
+
+.datasource-delete:hover {
+    background-color: var(--red-subtle-bg) !important;
+}

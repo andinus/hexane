@@ -1,0 +1,19 @@
+<h2>Datasources.</h2>
+<p>
+    Datasources can be queried after processing. Supported file types: <code>text/plain</code>, <code>application/pdf</code>.
+</p>
+
+<!--% upload-form %-->
+
+<div class="status"><!--% status %--></div>
+
+<datalist id="datasource-categories">
+    <!--% category-options %-->
+</datalist>
+
+<div id="file-list"
+     hx-get="/datasources"
+     hx-trigger="every 60s, newDatasourceFile from:body"
+     hx-swap="innerHTML">
+    <!--% file-list %-->
+</div>

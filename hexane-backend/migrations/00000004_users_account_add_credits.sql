@@ -1,0 +1,2 @@
+ALTER TABLE users.account
+  ADD COLUMN credit NUMERIC NOT NULL DEFAULT 0;

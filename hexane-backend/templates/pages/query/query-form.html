@@ -1,0 +1,22 @@
+<div id="query-form-and-response">
+    <form
+        hx-post="/query"
+        hx-swap="outerHTML"
+        hx-target="closest #query-form-and-response"
+        class="query-form"
+        action="/query"
+        method="post">
+        <label for="category-select" style="display: none">Category</label>
+        <select name="category" id="category-select">
+            <option value="">-All Categories-</option>
+            <!--% category-options %-->
+        </select>
+
+        <div class="break"></div>
+
+        <label for="query-input" style="display: none">Query bar</label>
+        <input type="text" name="query" id="query-input" value="<!--% query %-->" required />
+        <button type="submit" id="submit">⌕</button>
+    </form>
+    <!--% query-response %-->
+</div>

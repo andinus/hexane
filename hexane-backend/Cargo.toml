@@ -1,0 +1,87 @@
+[package]
+name = 'hexane-backend'
+version = '0.1.0'
+edition = '2021'
+authors = ['Andinus <andinus@nand.sh>']
+repository = 'https://github.com/andinus/hexane'
+
+[dependencies]
+serde_json = '1.0'
+axum-htmx = '0.5'
+tokio-util = '0.7'
+tower = '0.4'
+tower-sessions = '0.10'
+tracing = '0.1'
+time = '0.3'
+toml = '0.8'
+rand = '0.8'
+argon2 = '0.5'
+sha2 = '0.10'
+human_bytes = '0.4'
+template-nest = '0.3'
+email_address = '0.2'
+num-traits = '0.2'
+bigdecimal = '0.4'
+
+[dependencies.serde]
+version = '1.0'
+features = ['derive']
+
+[dependencies.axum]
+version = '0.7'
+features = [
+    'multipart',
+    'original-uri',
+]
+
+[dependencies.tokio]
+version = '1.0'
+features = ['full']
+
+[dependencies.tower-http]
+version = '0.5'
+features = [
+    'fs',
+    'compression-gzip',
+    'timeout',
+    'trace',
+]
+
+[dependencies.tower-sessions-sqlx-store]
+version = '0.10'
+features = ['postgres']
+
+[dependencies.tracing-subscriber]
+version = '0.3'
+features = ['env-filter']
+
+[dependencies.sqlx]
+version = '0.7'
+features = [
+    'runtime-tokio',
+    'postgres',
+    'uuid',
+    'ipnetwork',
+    'json',
+    'macros',
+    'time',
+    'bigdecimal'
+]
+
+[dependencies.clap]
+version = '4.4'
+features = [
+    'derive',
+    'env',
+]
+
+[dependencies.uuid]
+version = '1.7'
+features = ['serde']
+
+[dependencies.reqwest]
+version = '0.11'
+features = ['json']
+
+[dependencies.hexane-shared]
+path = '../hexane-shared'

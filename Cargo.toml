@@ -1,0 +1,17 @@
+[workspace]
+members = [
+    'hexane-backend',
+    'hexane-file-processor',
+    'hexane-shared',
+]
+resolver = '2'
+
+[profile.release]
+strip = true
+lto = true
+
+[profile.dev.package.sqlx-macros]
+opt-level = 3
+
+[patch.crates-io.template-nest]
+git = 'https://github.com/andinus/TemplateNest-rs.git'
